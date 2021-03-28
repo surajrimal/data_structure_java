@@ -126,7 +126,7 @@ public class LinkedListClass <T> implements LinkedListInterface<T> {
 			/*while(temp.getNextNode()!= temp.nodeData) {
 				temp = temp.getNextNode();
 			}*/
-			Node<T> tempNext = temp.getNextNode();
+			Node<T> tempNext = temp.getNextNode().getNextNode();
 			Node<T> newNode = new Node<T>(input);
 			temp.setNextNode(newNode);
 			newNode.setNextNode(tempNext);
@@ -135,7 +135,7 @@ public class LinkedListClass <T> implements LinkedListInterface<T> {
 			return true;
 			
 		}
-		//O(n)
+		//complexity O(n)
 		
 	}
 
